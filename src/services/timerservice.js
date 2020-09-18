@@ -5,8 +5,10 @@ class TimerService{
     constructor(pubsub, timerinterval, channel){
        this.timerinterval = timerinterval;
         this.handlerinterval = this.timerinterval.setInterval(() => {
-            pubsub.pub(channel.CHANNELTIMER, new Date())
-        }, 1000)
+            pubsub.pub(channel.CHANNELTIMER, new Date())    
+        }, 1000);
+        
+
     }
     dispose(){
 
